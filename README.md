@@ -7,11 +7,11 @@ an web-app which displays quotes using api data
 - in javascript i used the DOM  (Document Object Model) concept to display that data on a webpage.
 ```js
   document.addEventListener('DOMContentLoaded', function () {
-  fetch('https://random-api.xyz/api/fun/fortune')
+  fetch('https://random-api.xyz/api/fun/quote')
     .then(response => response.json())
     .then(data => {
       const apiDataElement = document.getElementById('apiData');
-      apiDataElement.textContent = JSON.stringify(data.fortune);
+      apiDataElement.textContent = JSON.stringify(data.quote);
       console.log(data);
     })
     .catch(error => {
